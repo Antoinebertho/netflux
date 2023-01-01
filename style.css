@@ -15,8 +15,14 @@ body {
 
 #main-page aside {
   width: 20%;
+
   padding-left: 20px;
   border-right: 1px solid grey;
+}
+
+aside img {
+  max-width: 100%;
+  height: auto;
 }
 
 #main-page h1,
@@ -25,9 +31,22 @@ h3 {
   font-weight: 100;
 }
 
+h1 {
+  line-height: 10px;
+}
+
+.populaire {
+  border: 1px solid black;
+  border-radius: 30px;
+  margin-right: 20px;
+  padding-left: 10px;
+  margin-left: -10px;
+}
+
 #main-page li {
   font-weight: 100;
   line-height: 40px;
+  list-style: none;
 }
 
 a {
@@ -82,8 +101,8 @@ td {
 }
 
 td img {
-  width: 250px;
-  height: 350px;
+  max-width: 100%;
+  height: auto;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -99,11 +118,11 @@ td img {
   transition: 1s ease;
 } */
 
-.shrink img {
+.grow img {
   transition: 1s ease;
 }
 
-.shrink img:hover {
+.grow img:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
