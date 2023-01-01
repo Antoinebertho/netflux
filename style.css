@@ -9,6 +9,11 @@ body {
   overflow-x: none;
 }
 
+.toggle {
+  display: none;
+  color: black;
+}
+
 #main-page {
   display: flex;
 }
@@ -146,4 +151,57 @@ footer button {
   margin-top: 25px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
+}
+
+@media all and (max-width: 600px) {
+  .toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+  }
+
+  .logo {
+    position: relative;
+    z-index: 20;
+  }
+
+  /* .open {
+    transition: transform 0.2s;
+  } */
+
+  .ouvrir {
+    display: block;
+  }
+
+  .fermer {
+    display: none;
+  }
+
+  .open .ouvrir {
+    display: none;
+  }
+
+  .open .fermer {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #f1f5f8;
+    flex-direction: column;
+    padding: 5rem;
+    justify-content: space-around;
+    transform: translateX(-100%);
+    /* transition: transform 0.5s; */
+  }
+
+  .open .menu {
+    transform: translateX(0);
+  }
 }
