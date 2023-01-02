@@ -5,9 +5,9 @@
   font-family: "Montserrat", sans-serif;
 }
 
-body {
+/* body {
   overflow-x: none;
-}
+} */
 
 .toggle {
   display: none;
@@ -153,6 +153,8 @@ footer button {
   cursor: pointer;
 }
 
+/* "Menu hamburger" */
+
 @media all and (max-width: 600px) {
   .toggle {
     display: block;
@@ -203,5 +205,10 @@ footer button {
 
   .open .menu {
     transform: translateX(0);
+  }
+
+  td {
+    display: flex;
+    flex-direction: column;
   }
 }
