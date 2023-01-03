@@ -112,7 +112,7 @@ td img {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-/* .shrink img {
+.shrink img {
   transition: 1s ease;
 }
 
@@ -121,9 +121,9 @@ td img {
   -ms-transform: scale(0.8);
   transform: scale(0.8);
   transition: 1s ease;
-} */
+}
 
-.grow img {
+/* .grow img {
   transition: 1s ease;
 }
 
@@ -132,7 +132,72 @@ td img {
   -ms-transform: scale(1.2);
   transform: scale(1.2);
   transition: 1s ease;
+} */
+
+td div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
+/* Classement etoiles */
+
+.rating {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Par défaut, une étoile est en gris,
+   avec un padding et un curseur en forme de main. */
+/* .fa-star {
+  color: gray;
+  cursor: pointer;
+  padding: 0.0625rem;
+} */
+/* Si elle porte en plus la classe '.gold', elle sera en jaune. */
+/* .fa-star.gold {
+  color: #ffdc0f;
+} */
+
+/* Le parent global '.rating' positionne le groupe des étoiles en colonne */
+/* .rating {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+} */
+
+/* Le groupe '.stars' positionne les étoiles
+       les unes à côté des autres sans espacements. */
+/* .stars {
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+} */
+
+/**
+     * Et là opère la magie du ':hover' !
+     */
+
+/* A l'état :hover sur le parent '.rating',
+       on force TOUTES les étoiles à passer en jaune. */
+/* .stars:hover .fa-star {
+  color: #ffdc0f;
+} */
+/* Et si la souris survole une étoile en particulier,
+       on sélectionne toutes les étoiles qui sont APRÈS celle-ci
+       grâce à l'opérateur '~' et on les force en GRIS */
+/* .stars .fa-star:hover ~ .fa-star {
+  color: gray;
+} */
+
+/* Fin classement étoiles */
 
 .bouton-suivant {
   display: flex;
@@ -142,16 +207,80 @@ td img {
 }
 
 footer button {
-  background-color: black;
+  /* background-color: black; */
   width: 10%;
-  height: 40px;
-  color: white;
-  border: 1px solid black;
-  border-radius: 40px;
+  /* height: 40px; */
+  /* color: white; */
+  /* border: 1px solid black; */
+  /* border-radius: 40px; */
   margin-top: 25px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
 }
+
+/* Bouton slide */
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+/* bouton shadow */
+
+/* .shadow__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.shadow__btn {
+  background: rgb(0, 140, 255);
+  box-shadow: 0 0 25px rgb(0, 140, 255);
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 0 5px rgb(0, 140, 255), 0 0 25px rgb(0, 140, 255),
+    0 0 50px rgb(0, 140, 255), 0 0 100px rgb(0, 140, 255);
+} */
 
 /* "Menu hamburger" */
 
