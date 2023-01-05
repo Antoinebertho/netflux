@@ -60,7 +60,7 @@ a:hover {
 
 .boutton-cafe {
   color: black;
-  background: black;
+  background: white;
   width: 130px;
   height: 40px;
   color: white;
@@ -68,6 +68,11 @@ a:hover {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
+}
+
+.boutonIMDB {
+  width: 30%;
+  margin: auto;
 }
 
 #main-page main {
